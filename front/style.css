@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Shadows+Into+Light+Two&family=Varela+Round&display=swap');
+
+button {
+    cursor: pointer;
+}
+
+header {
+    background-color: rgb(38, 81, 138);
+    padding: 25px;
+    margin: -7.9px;
+}
+
+body {
+    font-family: "Varela Round", sans-serif;
+}
+
+.h1 {
+    font-family: "Shadows Into Light Two", cursive;
+    color: whitesmoke;
+}
+
+#login-modal {
+    font-family: "Funnel Display", sans-serif;
+    background-color: transparent;
+    color: rgb(245, 236, 236);
+    border-style: none;
+    transition: 1s;
+    font-size: 20px;
+}
+
+#login-modal:hover {
+    scale: 110%;
+    transition: 0.5s;
+}
+
+#cadastro-modal {
+    font-family: "Funnel Display", sans-serif;
+    background-color: transparent;
+    color: rgb(245, 236, 236);
+    border-style: none;
+    transition: 1s;
+    font-size: 20px;
+}
+
+#cadastro-modal:hover {
+    scale: 110%;
+    transition: 0.5s;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.product-card {
+    flex: 1, 1, 250px;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    border-style: solid;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+
+
+/* fontes */
+
+.shadows-into-light-two-regular {
+    font-family: "Shadows Into Light Two", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.funnel-display {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+}
