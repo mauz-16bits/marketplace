@@ -32,4 +32,26 @@ def register():
     cursor = conn.cursor()
 
     try:
-        cursor.execute("INSERT INTO users (username, password) VALUES")
+        cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
+        conn.commit()
+        return jsonify({"error": "Usuário já existe"}), 400
+    finally:
+        conn.close()
+
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.get_json()
+    username = data("username")
+    password = data("password")
+
+    conn = sqlite3.connect("users.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
+
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        return jsonify ({"message": "Login realizado com sucesso, pequeno crioulo!"})
+        else:
+            return jsonify({"error": "Username ou senha incorretas"})
