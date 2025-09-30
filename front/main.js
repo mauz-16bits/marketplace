@@ -1,5 +1,6 @@
 const cadastro = document.getElementById('cadastro')
 const login = document.getElementById('login')
+const cart = document.getElementById('cart')
 
 function formCadastro() {
     
@@ -10,5 +11,11 @@ function formCadastro() {
 function formLogin() {
     
     login.showModal()
+
+}
+
+function addCart(cost) {
+
+    cart.innerHTML = cost
 
 }

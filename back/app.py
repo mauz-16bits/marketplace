@@ -53,5 +53,5 @@ def login():
 
     if user:
         return jsonify ({"message": "Login realizado com sucesso, pequeno crioulo!"})
-        else:
-            return jsonify({"error": "Username ou senha incorretas"})
+    else:
+        return jsonify({"error": "Username ou senha incorretas"})
